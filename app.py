@@ -34,6 +34,8 @@ def run():
 			table.clear_round()
 
 		result_table = metric_cum_balance_by_player(table)
+
+		result_table.to_excel(f'delete.xlsx')
 		params['result'] = result_table.to_dict()
 
 		return json.dumps(params)
